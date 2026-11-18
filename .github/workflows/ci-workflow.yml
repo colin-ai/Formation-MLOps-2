@@ -22,7 +22,7 @@ jobs:
       - name: Run tests
         run: uv run pytest
       - name: Run vulture
-        run: uv run vulture
+        run: uv run vulture ./
       - name: Run bandit
         run: uv run bandit
 
