@@ -17,8 +17,12 @@ jobs:
         run: uv python install
       - name: Install dependencies
         run: uv sync --locked --all-groups
-      - name: Run Linter
+      - name: Run ruff
         run: uv run ruff check --output-format=github --target-version=py39
       - name: Run tests
         run: uv run pytest
+      - name: Run vulture
+        run: uv run vulture
+      - name: Run bandit
+        run: uv run bandit
 

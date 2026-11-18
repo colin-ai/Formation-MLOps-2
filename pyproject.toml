@@ -10,7 +10,9 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "apache-airflow>=3.3.0",
+    "bandit>=1.9.4",
     "boto3>=1.38.20,<1.43.6", # bornes de compat pour mlflow.bedrock.autolog()
+    "detect-secrets>=1.5.0",
     "joblib>=1.5.3",
     "mlflow==3.13", # 3.14 is broken on 10/07/2026
     "pandas==2.3.3", # MLFlow doesn't support pandas 3 on 3.13
@@ -21,6 +23,7 @@ dependencies = [
     "scikit-learn>=1.9.0",
     "sqlalchemy>=2.0.51",
     "streamlit>=1.59.1",
+    "vulture>=2.16",
 ]
 
 [tool.setuptools]
